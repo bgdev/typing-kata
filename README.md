@@ -1,19 +1,19 @@
 Requirements Summary
 ====================
 
-Write a program, that assists the user while learning to type at a constant rate. The program should analyze a fixed time window and continously measures and display the typing speed while the user is typing.
+Write a program that assists the user while learning to type at a constant rate. The program should continously measure the typing speed of the user, while rapidly updating the user's actual typing rate.
 
 
-Entering the Program
-====================
+Initial State
+=============
 
 When the program is started, it enters idle mode and waits for commands. If the user types "help", the program prints some instructions and stays in idle mode. 
 
 
-Running a Training Session
-==========================
+Training Session
+================
 
-As soon as the user inputs "train <desired-typing-rate>", the program enters training mode and starts a training session, which lasts for one minute. For example, "train 3" means that the user should type three characters per second at a steady pace.
+As soon as the user inputs "train DESIRED_TYPING_RATE", the program enters training mode and starts a training session, which lasts for one minute. For example, "train 3" means that the user should type three characters per second at a steady pace.
 
 Then, the program starts measuring the typing rate of the user, while the user is typing an arbitrary text. After two seconds have passed, the program starts to continuously display the user's actual typing rate.
 
@@ -22,7 +22,7 @@ For example, if the target typing rate is 3 keystrokes per second and the user i
 The program continues to update the user's actual typing rate and updates the display twice per second at a fixed rate. In the same time, the program keeps computing the user's actual typing rate, taking into account the keystrokes from the last two seconds.
 
 
-Exitting the Program
+Quitting the Program
 ====================
 
 The training session is over automatically after one minute of training has passed. When this happens, the program resets the display and enters idle mode again. Now the user can type "quit" in order to quit, or another "go" in order to perform another training session.
