@@ -7,11 +7,17 @@ Write a program that assists the user while learning to type at a constant rate.
 Initial State
 =============
 
-When the program is started, it enters idle mode and waits for commands. If the user types "help", the program prints some instructions and stays in idle mode. 
+When the program is started, it enters idle mode and waits for commands. 
 
 
-Training Session
-================
+Printing Help
+=============
+
+If the user types "help" or something else that is not valid in this mode, the program prints some help instructions and stays in idle mode. 
+
+
+Performing a Training Session
+=============================
 
 As soon as the user inputs "train DESIRED_TYPING_RATE", the program enters training mode and starts a training session, which lasts for one minute. For example, "train 3" means that the user should type three characters per second at a steady pace.
 
@@ -21,11 +27,13 @@ For example, if the target typing rate is 3 keystrokes per second and the user i
 
 The program continues to update the user's actual typing rate and updates the display twice per second at a fixed rate. In the same time, the program keeps computing the user's actual typing rate, taking into account the keystrokes from the last two seconds.
 
+The training session is over automatically after one minute of training has passed. When this happens, the program resets the display and enters idle mode again. 
 
-Quitting the Program
-====================
 
-The training session is over automatically after one minute of training has passed. When this happens, the program resets the display and enters idle mode again. Now the user can type "quit" in order to quit, or another "go" in order to perform another training session.
+Repeating and Quitting
+======================
+
+Now the user can type "quit" in order to quit, or another "go" in order to perform another training session.
 
 
 Credits
