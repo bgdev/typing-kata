@@ -1,7 +1,7 @@
-Requirements Summary
-====================
+Code Kata: Typing Rate Trainer
+==============================
 
-Write a program that assists the user while learning to type at a constant rate. The program should continously measure the typing speed of the user, while rapidly updating the user's actual typing rate.
+Summary: Write a program that assists the user while learning to type at a constant rate. The program should continously measure the typing speed of the user, while rapidly updating the user's actual typing rate.
 
 
 Initial State
